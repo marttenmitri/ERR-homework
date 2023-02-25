@@ -1,38 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ee">
+
 <head>
-   
-    <link rel="stylesheet" href="https://unpkg.com/@splidejs/splide@4.1.3/dist/css/splide.min.css">
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERR Proovitöö</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERR Proovitöö</title>
 </head>
+
 <body>
-    <script src="script.js"></script>
-    
-    
-    <div class="splide" id="slider-3">
-        <div class="splide__track">
-          <ul class="splide__list" id="slider-container-3">
-          </ul>
-        </div>
-      </div>
+  <header>
+    <h1>Martten Mitri proovitöö</h1>
+  </header>
 
-      <div class="splide" id="slider-4">
-        <div class="splide__track">
-          <ul class="splide__list" id="slider-container-4">
-          </ul>
-        </div>
-      </div>
+  <script>
+    // Generate divs using vanilla JavaScript
+    for (let i = 1; i <= 25; i++) {
+      // Create slider-heading div
+      if (i !== 2 && i !== 12 && i !== 18) {
+        const sliderHeadingDiv = document.createElement("div");
+        sliderHeadingDiv.classList.add("slider-heading");
+        sliderHeadingDiv.id = `slider-heading-${i}`;
+        document.body.appendChild(sliderHeadingDiv);
 
-      <div class="splide" id="slider-5">
-        <div class="splide__track">
-          <ul class="splide__list" id="slider-container-5">
-          </ul>
-        </div>
-      </div>
-      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+        // Create splide div
+        const splideDiv = document.createElement("div");
+        splideDiv.classList.add("splide");
+        splideDiv.id = `slider-${i}`;
+        document.body.appendChild(splideDiv);
+
+        // Create splide__track div
+        const splideTrackDiv = document.createElement("div");
+        splideTrackDiv.classList.add("splide__track");
+        splideDiv.appendChild(splideTrackDiv);
+
+        // Create splide__list ul
+        const splideListUl = document.createElement("ul");
+        splideListUl.classList.add("splide__list");
+        splideListUl.id = `slider-container-${i}`;
+        splideTrackDiv.appendChild(splideListUl);
+      }
+    }
+  </script>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
 </body>
+
 </html>
