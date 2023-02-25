@@ -1,0 +1,9 @@
+body{
+    background-color: #2c475a;
+}
+.splide__slide img {
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    object-fit: cover;
+  }
