@@ -1,31 +1,33 @@
-body{
+body {
     background-color: #2c475a;
     margin: 0;
     padding: 0;
 }
+
 .splide__slide img {
     width: 100%;
     object-fit: cover;
     border-radius: 5px;
 }
+
 .slider-heading {
     text-align: left;
     font-size: 20px;
     color: #fff;
     padding: 10px 0;
     margin-left: 1%;
-  }
-  .splide__slide img:hover {
-    filter: brightness(130%);
-  }
+}
 
-  header {
+.splide__slide img:hover {
+    filter: brightness(130%);
+}
+
+header {
     background-color: #425869;
     color: #fff;
     padding: 10px;
-  }
-  
-  h1 {
+}
+
+h1 {
     margin: 0;
-  }
-  
+}
